@@ -75,7 +75,7 @@ FIELDTERMINATOR= ',',
 ROWTERMINATOR = '\n'
 )
 
-
+select * from [dbo].[Active];
 -------------------------------------------------------------------------------------------
 Drop table [inactive];
 CREATE TABLE [inactive] (
@@ -152,6 +152,7 @@ FIRSTROW = 2,
 FIELDTERMINATOR= ',',
 ROWTERMINATOR = '\n'
 )
+select * from [dbo].[inactive];
 
 
 
@@ -223,7 +224,7 @@ CREATE TABLE [over all data] (
 );
 
 
-BULK INSERT [dbo].[Active]
+BULK INSERT [over all data]
 FROM 'F:\Database excel\New folder\over all data.csv'
 WITH
 (
@@ -231,3 +232,5 @@ FIRSTROW = 2,
 FIELDTERMINATOR= ',',
 ROWTERMINATOR = '\n'
 )
+
+select * from [dbo].[over all data];
